@@ -1,0 +1,50 @@
+/**
+ * [CSS Reset] Sanitize.css: Accessibility: Reduce motion media query
+ *
+ * sanitize.css is a CSS library that provides consistent, cross-browser 
+ * default styling of HTML elements alongside useful defaults.
+ *
+ * sanitize.css is developed alongside normalize.css, which means every 
+ * normalization is included, and every normalization and opinion are 
+ * clearly marked and documented.
+ * 
+ * sanitize.css wraps styles in zero-specificity selectors using :where().
+ *
+ * @package     pearfect
+ * @category    styles
+ * @version     1.0.0
+ * @since       1.0.0
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ * @see         https://github.com/csstools/sanitize.css/tree/main
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0
+ *          Init file
+ */
+
+
+/*
+ * 1. Remove animations when motion is reduced (opinionated).
+ * 2. Remove fixed background attachments when motion is reduced (opinionated).
+ * 3. Remove timed scrolling behaviors when motion is reduced (opinionated).
+ * 4. Remove transitions when motion is reduced (opinionated).
+ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important; /* 1 */
+    animation-duration: 1ms !important; /* 1 */
+    animation-iteration-count: 1 !important; /* 1 */
+    background-attachment: initial !important; /* 2 */
+    scroll-behavior: auto !important; /* 3 */
+    transition-delay: 0s !important; /* 4 */
+    transition-duration: 0s !important; /* 4 */
+  }
+}

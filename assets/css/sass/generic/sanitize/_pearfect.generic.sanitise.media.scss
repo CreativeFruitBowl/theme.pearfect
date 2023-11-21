@@ -1,0 +1,38 @@
+/**
+ * [CSS Reset] Sanitize.css: Media
+ *
+ * sanitize.css is a CSS library that provides consistent, cross-browser 
+ * default styling of HTML elements alongside useful defaults.
+ *
+ * sanitize.css is developed alongside normalize.css, which means every 
+ * normalization is included, and every normalization and opinion are 
+ * clearly marked and documented.
+ * 
+ * sanitize.css wraps styles in zero-specificity selectors using :where().
+ *
+ * @package     pearfect
+ * @category    styles
+ * @version     1.0.0
+ * @since       1.0.0
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ * @see         https://github.com/csstools/sanitize.css/tree/main
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0
+ *          Init file
+ */
+
+
+/**
+ * Restrict sizing to the page width in all browsers (opinionated).
+ */
+
+:where(iframe, img, input, video, select, textarea) {
+  height: auto;
+  max-width: 100%;
+}
